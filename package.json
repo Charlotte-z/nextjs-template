@@ -7,7 +7,7 @@
     "start": "next start",
     "lint": "next lint",
     "dev": "concurrently --kill-others \"pnpm:next:*\"",
-    "relay": "relay-compiler --src . --schema ./schema/schema.graphql ",
+    "relay": "relay-compiler --src ./__gql_types__ --schema ./schema/schema.graphql ",
     "next:watch_relay": "npm-watch gen",
     "gen": "npm-run-all -s gen:gql run:relay",
     "gen:gql": "node ./node_modules/graphql2relay/dist/index.js",
@@ -17,7 +17,7 @@
   "watch": {
     "next:watch_relay": {
       "patterns": [
-        "./dotgql"
+        "."
       ],
       "extensions": "graphql",
       "verbose": true
@@ -53,7 +53,7 @@
     "get-graphql-schema": "^2.1.2",
     "graphql": "^15.8.0",
     "graphql-cli": "4.1.0",
-    "graphql2relay": "^0.0.1",
+    "graphql2relay": "^0.0.2",
     "postcss": "^8.4.5",
     "prettier": "^1.18.2",
     "relay-compiler": "^13.0.2",
