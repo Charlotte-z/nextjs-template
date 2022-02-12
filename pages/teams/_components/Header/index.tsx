@@ -2,17 +2,17 @@ import { useState } from 'react';
 import { ConnectionHandler, useFragment } from 'react-relay';
 
 import { mutate } from '@/gqlHelpers/mutate';
-import { AddSkill } from '@/graphql/teams/mutation/AddSkillMutation';
-import { AppHeaderFragment } from '@/graphql/teams/query/HeaderFragment';
+import { WikiHeaderFragment } from '@/graphql/teams/query/HeaderFragment';
 import { AddSkillMutation } from '@/graphql/teams/mutation/__generated__/AddSkillMutation.graphql';
 import { HeaderFragment$key } from '@/graphql/teams/query/__generated__/HeaderFragment.graphql';
+import { WikiAddSkillMutation } from '@/graphql/teams/mutation/AddSkillMutation';
 
 type HeaderProps = {
   queryRef: HeaderFragment$key;
 };
 
 const Header = ({ queryRef }: HeaderProps) => {
-  const data = useFragment<HeaderFragment$key>(AppHeaderFragment, queryRef);
+  const data = useFragment<HeaderFragment$key>(WikiHeaderFragment, queryRef);
 
   const [value, setValue] = useState<string>();
 
@@ -29,7 +29,7 @@ const Header = ({ queryRef }: HeaderProps) => {
         onClick={() => {
           if (value) {
             mutate<AddSkillMutation>({
-              mutation: AddSkill,
+              mutation: WikiAddSkillMutation,
               variables: {
                 memberName: data.name,
                 skill: value,

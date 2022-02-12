@@ -3,22 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "npm-run-all -p watch_relay next:dev",
-    "start:watch": "concurrently --kill-others --names \"yarn run watch_relay\" \"react-scripts start\"",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "dev": "concurrently --kill-others \"pnpm:next:*\"",
     "relay": "relay-compiler --src . --schema ./schema/schema.graphql ",
-    "watch_relay": "npm-watch relay",
-    "start2": "pnpm relay && concurrently --kill-others --names \"pnpm run next:dev\" \"pnpm relay --watch\"",
-    "next:dev": "next dev",
-    "next:build": "next build",
-    "next:start": "next start",
-    "lint": "next lint"
+    "next:watch_relay": "npm-watch gen",
+    "gen": "npm-run-all -s gen:gql run:relay",
+    "gen:gql": "node ./node_modules/graphql2relay/dist/index.js",
+    "run:relay": "pnpm run relay",
+    "next:dev": "next dev"
   },
   "watch": {
-    "relay": {
+    "next:watch_relay": {
       "patterns": [
-        "."
+        "./dotgql"
       ],
-      "extensions": "ts,tsx, graphql",
+      "extensions": "graphql",
       "verbose": true
     }
   },
@@ -50,8 +51,9 @@
     "concurrently": "^5.0.0",
     "eslint-plugin-prettier": "^3.1.1",
     "get-graphql-schema": "^2.1.2",
-    "graphql": "^15.6.1",
+    "graphql": "^15.8.0",
     "graphql-cli": "4.1.0",
+    "graphql2relay": "^0.0.1",
     "postcss": "^8.4.5",
     "prettier": "^1.18.2",
     "relay-compiler": "^13.0.2",

@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<9c26388246d18b161afcd73817818ca2>>
+ * @generated SignedSource<<94123e2241b5299f36b2c5d3dcc1ad27>>
  * @lightSyntaxTransform
  * @nogrep
  */
@@ -15,15 +15,13 @@ export type SkillsListPaginationQuery$variables = {
   first?: number | null;
   id: string;
 };
-export type SkillsListPaginationQueryVariables = SkillsListPaginationQuery$variables;
 export type SkillsListPaginationQuery$data = {
   readonly node: {
     readonly " $fragmentSpreads": FragmentRefs<"TeamsFragment">;
   } | null;
 };
-export type SkillsListPaginationQueryResponse = SkillsListPaginationQuery$data;
 export type SkillsListPaginationQuery = {
-  variables: SkillsListPaginationQueryVariables;
+  variables: SkillsListPaginationQuery$variables;
   response: SkillsListPaginationQuery$data;
 };
 

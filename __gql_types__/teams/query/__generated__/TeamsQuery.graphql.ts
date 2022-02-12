@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<f744c54aec4686e5e8bb7ec2fb893d94>>
+ * @generated SignedSource<<70dae0d5f74270f6be7b8e50531f8c71>>
  * @lightSyntaxTransform
  * @nogrep
  */
@@ -14,7 +14,6 @@ export type TeamsQuery$variables = {
   first?: number | null;
   after?: string | null;
 };
-export type TeamsQueryVariables = TeamsQuery$variables;
 export type TeamsQuery$data = {
   readonly Teams: ReadonlyArray<{
     readonly id: string;
@@ -22,9 +21,8 @@ export type TeamsQuery$data = {
     readonly " $fragmentSpreads": FragmentRefs<"TeamsFragment" | "HeaderFragment">;
   } | null>;
 };
-export type TeamsQueryResponse = TeamsQuery$data;
 export type TeamsQuery = {
-  variables: TeamsQueryVariables;
+  variables: TeamsQuery$variables;
   response: TeamsQuery$data;
 };
 

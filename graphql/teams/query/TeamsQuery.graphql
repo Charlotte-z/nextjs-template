@@ -1,0 +1,8 @@
+query TeamsQuery($first: Int, $after: String) {
+  Teams {
+    id
+    name
+    ...TeamsFragment
+    ...HeaderFragment
+  }
+}

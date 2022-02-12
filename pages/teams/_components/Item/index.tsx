@@ -1,8 +1,8 @@
 import { useFragment } from 'react-relay';
 
 import { mutate } from '@/gqlHelpers/mutate';
-import { RemoveSkill } from '@/graphql/teams/mutation/RemoveSkillMutation';
-import { AppItemFragment } from '@/graphql/teams/query/ItemFragment';
+import { WikiRemoveSkillMutation } from '@/graphql/teams/mutation/RemoveSkillMutation';
+import { WikiItemFragment } from '@/graphql/teams/query/ItemFragment';
 
 import type { RemoveSkillMutation } from '@/graphql/teams/mutation/__generated__/RemoveSkillMutation.graphql';
 import type { ItemFragment$key } from '@/graphql/teams/query/__generated__/ItemFragment.graphql';
@@ -10,7 +10,7 @@ import type { ItemFragment$key } from '@/graphql/teams/query/__generated__/ItemF
 import styles from './Item.module.scss';
 import { useState } from 'react';
 import { UpdateSkillMutation } from '@/graphql/teams/mutation/__generated__/UpdateSkillMutation.graphql';
-import { UpdateSkill } from '@/graphql/teams/mutation/UpdateSkillMutation';
+import { WikiUpdateSkillMutation } from '@/graphql/teams/mutation/UpdateSkillMutation';
 
 interface ItemProps {
   queryRef: ItemFragment$key;
@@ -20,13 +20,13 @@ interface ItemProps {
 }
 
 const Item = (props: ItemProps) => {
-  const data = useFragment<ItemFragment$key>(AppItemFragment, props.queryRef);
+  const data = useFragment<ItemFragment$key>(WikiItemFragment, props.queryRef);
 
   const [editing, setEditing] = useState<boolean>(false)
 
   const handleDelete = () => {
     mutate<RemoveSkillMutation>({
-      mutation: RemoveSkill,
+      mutation: WikiRemoveSkillMutation,
       variables: {
         memberName: props.member,
         skill: data.name,
@@ -59,7 +59,7 @@ const Item = (props: ItemProps) => {
           onBlur={(e) => {
             setEditing(false)
             mutate<UpdateSkillMutation>({
-              mutation: UpdateSkill,
+              mutation: WikiUpdateSkillMutation,
               variables: {
                 memberName: props.member,
                 skill: data.name,

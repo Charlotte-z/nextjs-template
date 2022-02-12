@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { PreloadedQuery, useFragment, usePaginationFragment } from 'react-relay';
 
-import { AppTeamsFragment } from '@/graphql/teams/query/TeamsFragment';
+import { WikiTeamsFragment } from '@/graphql/teams/query/TeamsFragment';
 
 import type { TeamsFragment$key } from '@/graphql/teams/query/__generated__/TeamsFragment.graphql';
 import type { TeamsQuery } from '@/graphql/teams/query/__generated__/TeamsQuery.graphql';
@@ -21,7 +21,7 @@ type TodoProps = {
 };
 
 const Todo = (props: TodoProps) => {
-  const data = usePaginationFragment<SkillsListPaginationQuery, TeamsFragment$key>(AppTeamsFragment, props.queryRef);
+  const data = usePaginationFragment<SkillsListPaginationQuery, TeamsFragment$key>(WikiTeamsFragment, props.queryRef);
   const [pointer, setPointer] = useState(-1);
 
 

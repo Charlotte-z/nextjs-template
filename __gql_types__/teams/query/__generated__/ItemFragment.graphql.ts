@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<9a504426f16e5b7024be02b9c8a6da10>>
+ * @generated SignedSource<<2b1dd6c3eedc6c7d63e5eb6e7bf8cd34>>
  * @lightSyntaxTransform
  * @nogrep
  */
@@ -14,7 +14,6 @@ export type ItemFragment$data = {
   readonly name: string;
   readonly " $fragmentType": "ItemFragment";
 };
-export type ItemFragment = ItemFragment$data;
 export type ItemFragment$key = {
   readonly " $data"?: ItemFragment$data;
   readonly " $fragmentSpreads": FragmentRefs<"ItemFragment">;

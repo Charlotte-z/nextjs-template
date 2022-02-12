@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<0774592bbee402a763af3c2550d6b885>>
+ * @generated SignedSource<<f222b79ee202ee635f3f67b9c18faffd>>
  * @lightSyntaxTransform
  * @nogrep
  */
@@ -13,16 +13,14 @@ export type RemoveSkillMutation$variables = {
   memberName?: string | null;
   skill?: string | null;
 };
-export type RemoveSkillMutationVariables = RemoveSkillMutation$variables;
 export type RemoveSkillMutation$data = {
   readonly removeSkill: {
     readonly id: string;
     readonly name: string;
   };
 };
-export type RemoveSkillMutationResponse = RemoveSkillMutation$data;
 export type RemoveSkillMutation = {
-  variables: RemoveSkillMutationVariables;
+  variables: RemoveSkillMutation$variables;
   response: RemoveSkillMutation$data;
 };
 

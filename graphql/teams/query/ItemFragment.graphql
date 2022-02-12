@@ -1,0 +1,3 @@
+fragment ItemFragment on Skill {
+  name
+}

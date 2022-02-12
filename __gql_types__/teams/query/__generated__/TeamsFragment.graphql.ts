@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<996a6877e2fe780efd34f21d7c7bb8f1>>
+ * @generated SignedSource<<4349dad924c5e2b011ba13c37ce01e15>>
  * @lightSyntaxTransform
  * @nogrep
  */
@@ -29,7 +29,6 @@ export type TeamsFragment$data = {
   readonly id: string;
   readonly " $fragmentType": "TeamsFragment";
 };
-export type TeamsFragment = TeamsFragment$data;
 export type TeamsFragment$key = {
   readonly " $data"?: TeamsFragment$data;
   readonly " $fragmentSpreads": FragmentRefs<"TeamsFragment">;

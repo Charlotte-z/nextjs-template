@@ -1,0 +1,4 @@
+fragment HeaderFragment on ReactTeam {
+  id
+  name
+}

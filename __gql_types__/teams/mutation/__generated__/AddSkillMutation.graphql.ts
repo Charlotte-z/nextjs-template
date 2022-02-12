@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<49dc4b5e92006143c25b8c95418a7fd9>>
+ * @generated SignedSource<<7b8a4b61deca8ed442c98fcd0c56d39b>>
  * @lightSyntaxTransform
  * @nogrep
  */
@@ -13,7 +13,6 @@ export type AddSkillMutation$variables = {
   memberName?: string | null;
   skill?: string | null;
 };
-export type AddSkillMutationVariables = AddSkillMutation$variables;
 export type AddSkillMutation$data = {
   readonly addSkill: {
     readonly edge: {
@@ -23,9 +22,8 @@ export type AddSkillMutation$data = {
     };
   };
 };
-export type AddSkillMutationResponse = AddSkillMutation$data;
 export type AddSkillMutation = {
-  variables: AddSkillMutationVariables;
+  variables: AddSkillMutation$variables;
   response: AddSkillMutation$data;
 };
 

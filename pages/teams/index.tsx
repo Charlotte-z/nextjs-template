@@ -2,12 +2,13 @@ import { lazy, Suspense } from 'react';
 import { loadQuery } from 'react-relay';
 
 import RelayEnvironment from '@/gqlHelpers/RelayEnvironment';
-import { AppTeamsQuery } from '@/graphql/teams/query/TeamsQuery';
+
+import { WikiTeamsQuery } from '@/graphql/teams/query/TeamsQuery';
 import { TeamsQuery } from '@/graphql/teams/query/__generated__/TeamsQuery.graphql';
 
 const Teams = lazy(() => import('./_views/Teams'));
 
-const preloadedQuery = loadQuery<TeamsQuery>(RelayEnvironment, AppTeamsQuery, {
+const preloadedQuery = loadQuery<TeamsQuery>(RelayEnvironment, WikiTeamsQuery, {
   first: 2,
 });
 

@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<ac5588c46d7ac23573c89078138bb7e2>>
+ * @generated SignedSource<<8043b750786e377158f9aafef3aa77b1>>
  * @lightSyntaxTransform
  * @nogrep
  */
@@ -14,16 +14,14 @@ export type UpdateSkillMutation$variables = {
   skill?: string | null;
   update?: string | null;
 };
-export type UpdateSkillMutationVariables = UpdateSkillMutation$variables;
 export type UpdateSkillMutation$data = {
   readonly updateSkill: {
     readonly id: string;
     readonly name: string;
   };
 };
-export type UpdateSkillMutationResponse = UpdateSkillMutation$data;
 export type UpdateSkillMutation = {
-  variables: UpdateSkillMutationVariables;
+  variables: UpdateSkillMutation$variables;
   response: UpdateSkillMutation$data;
 };
 

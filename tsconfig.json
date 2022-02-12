@@ -12,7 +12,7 @@
         "gqlHelpers/*"
       ],
       "@/graphql/*": [
-        "graphql/*"
+        "__gql_types__/*"
       ],
       "@/common/*": [
         "common/*"

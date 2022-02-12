@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<0179f0a756a5fde5edad3e4ad45dde45>>
+ * @generated SignedSource<<5bc38aac29dcf6a9c394a1df8fdd2ad6>>
  * @lightSyntaxTransform
  * @nogrep
  */
@@ -15,7 +15,6 @@ export type HeaderFragment$data = {
   readonly name: string;
   readonly " $fragmentType": "HeaderFragment";
 };
-export type HeaderFragment = HeaderFragment$data;
 export type HeaderFragment$key = {
   readonly " $data"?: HeaderFragment$data;
   readonly " $fragmentSpreads": FragmentRefs<"HeaderFragment">;
