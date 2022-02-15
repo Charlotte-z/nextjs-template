@@ -69,9 +69,9 @@ const App = () => {
             </Alert>
           </Stack>
           {/* ---------------styling lost, will be refactor by emotion-------------- */}
-          <Suspense fallback={<p>loading</p>}>
+          {/* <Suspense fallback={<p>loading</p>}>
           <Teams preloadedQuery={preloadedQuery} />
-          </Suspense>
+          </Suspense> */}
         </section>
       </div>
     </div>
