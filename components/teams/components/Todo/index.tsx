@@ -1,16 +1,14 @@
 import { useState } from 'react';
-import { PreloadedQuery, useFragment, usePaginationFragment } from 'react-relay';
+import { usePaginationFragment } from 'react-relay';
 
-import { WikiTeamsFragment } from '@/graphql/teams/query/TeamsFragment';
+import { WikiTeamsFragment } from '@graphql/teams/query/TeamsFragment';
 
-import type { TeamsFragment$key } from '@/graphql/teams/query/__generated__/TeamsFragment.graphql';
-import type { TeamsQuery } from '@/graphql/teams/query/__generated__/TeamsQuery.graphql';
+import type { TeamsFragment$key } from '@graphql/teams/query/__generated__/TeamsFragment.graphql';
 
 import Item from '../Item';
 import Header from '../Header';
-import { HeaderFragment$key } from '@/graphql/teams/query/__generated__/HeaderFragment.graphql';
 import { FragmentRefs } from 'relay-runtime';
-import { SkillsListPaginationQuery, SkillsListPaginationQuery$data } from '@/graphql/teams/query/__generated__/SkillsListPaginationQuery.graphql';
+import { SkillsListPaginationQuery } from '@graphql/teams/query/__generated__/SkillsListPaginationQuery.graphql';
 
 type TodoProps = {
   queryRef: {

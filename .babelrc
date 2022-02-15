@@ -1,9 +1,16 @@
 {
-  "presets": [
-    "next/babel"
-  ],
-  "plugins": [
-    "relay",
-    "macros"
-  ]
+    "presets": [
+        [
+            "next/babel",
+            {
+                "preset-react": {
+                    "importSource": "@emotion/react"
+                }
+            }
+        ]
+    ],
+    "plugins": [
+        "relay",
+        "macros"
+    ]
 }

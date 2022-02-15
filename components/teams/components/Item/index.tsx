@@ -1,16 +1,16 @@
 import { useFragment } from 'react-relay';
 
-import { mutate } from '@/gqlHelpers/mutate';
-import { WikiRemoveSkillMutation } from '@/graphql/teams/mutation/RemoveSkillMutation';
-import { WikiItemFragment } from '@/graphql/teams/query/ItemFragment';
+import { mutate } from '@gqlHelpers/mutate';
+import { WikiRemoveSkillMutation } from '@graphql/teams/mutation/RemoveSkillMutation';
+import { WikiItemFragment } from '@graphql/teams/query/ItemFragment';
 
-import type { RemoveSkillMutation } from '@/graphql/teams/mutation/__generated__/RemoveSkillMutation.graphql';
-import type { ItemFragment$key } from '@/graphql/teams/query/__generated__/ItemFragment.graphql';
+import type { RemoveSkillMutation } from '@graphql/teams/mutation/__generated__/RemoveSkillMutation.graphql';
+import type { ItemFragment$key } from '@graphql/teams/query/__generated__/ItemFragment.graphql';
 
 import styles from './Item.module.scss';
 import { useState } from 'react';
-import { UpdateSkillMutation } from '@/graphql/teams/mutation/__generated__/UpdateSkillMutation.graphql';
-import { WikiUpdateSkillMutation } from '@/graphql/teams/mutation/UpdateSkillMutation';
+import { UpdateSkillMutation } from '@graphql/teams/mutation/__generated__/UpdateSkillMutation.graphql';
+import { WikiUpdateSkillMutation } from '@graphql/teams/mutation/UpdateSkillMutation';
 
 interface ItemProps {
   queryRef: ItemFragment$key;

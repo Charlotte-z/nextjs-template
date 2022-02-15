@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { ConnectionHandler, useFragment } from 'react-relay';
 
-import { mutate } from '@/gqlHelpers/mutate';
-import { WikiHeaderFragment } from '@/graphql/teams/query/HeaderFragment';
-import { AddSkillMutation } from '@/graphql/teams/mutation/__generated__/AddSkillMutation.graphql';
-import { HeaderFragment$key } from '@/graphql/teams/query/__generated__/HeaderFragment.graphql';
-import { WikiAddSkillMutation } from '@/graphql/teams/mutation/AddSkillMutation';
+import { mutate } from '@gqlHelpers/mutate';
+import { WikiHeaderFragment } from '@graphql/teams/query/HeaderFragment';
+import { AddSkillMutation } from '@graphql/teams/mutation/__generated__/AddSkillMutation.graphql';
+import { HeaderFragment$key } from '@graphql/teams/query/__generated__/HeaderFragment.graphql';
+import { WikiAddSkillMutation } from '@graphql/teams/mutation/AddSkillMutation';
 
 type HeaderProps = {
   queryRef: HeaderFragment$key;

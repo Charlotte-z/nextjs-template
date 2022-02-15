@@ -4,6 +4,7 @@ module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
+  swcMinify: true,
   productionBrowserSourceMaps: true,
   async redirects() {
     return [
